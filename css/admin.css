@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    
+    .body-bg {
+        @apply w-full bg-gray-200 h-full;
+    }
+
+    .side-container {
+        @apply max-w-xs w-full h-full absolute bg-gray-800
+    }
+}
+
+@layer utilities {
+    @variants responsive {
+
+    }
+}
