@@ -6,39 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Admin Semesta</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./build/admin.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="./dist/css/all.min.css"> -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Javascript -->
+    <script src="./dist/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <!-- <script src="./dist/js/all.min.js"></script> -->
+    
 </head>
 <body class="body-bg">
     
     <div class="main-wrapper">
-        <div class="side-container">
-            <div class="header-side">
-
+        <div class="sidebar ">
+            <div class="logo-details">
+                <a href="./" class="img-wrapper">
+                    <img src="./img/logo.png" alt="Logo Brand" class="logo-img">
+                </a>
+                <span class="logo_name">Adminesta</span>
             </div>
-            <div class="middle-side">
-
-            </div>
-            <div class="footer-side">
-
-            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-grid-alt' ></i>
+                        <span class="link_name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-collection' ></i>
+                        <span class="link_name">Category</span>
+                    </a>
+                    <i class="bx bxs-chevron-down"></i>
+                </li>
+            </ul>
         </div>
         <div class="main-container">
-            <div class="content-wrapper">
-                <div class="top-header-content">
-
-                </div>
-                <div class="header-content">
-
-                </div>
-                <div class="middle-content">
-
-                </div>
-                <div class="footer-content">
-                    
-                </div>
-            </div>
+            
         </div>
     </div>
 
+    <!-- Javascript -->
+    <script src="./dist/js/admin.js"></script>
 </body>
 </html>
