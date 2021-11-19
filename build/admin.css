@@ -2,6 +2,7 @@
   max-width: 300px;
   width: 300px;
   height: calc(100vh - 44px);
+  transition: all .5s ease;
 }
 
 /*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
@@ -635,7 +636,6 @@ video {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-  opacity: 1;
 }
 
 .nav-list {
@@ -668,9 +668,7 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 500;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 300ms;
@@ -711,11 +709,12 @@ video {
 }
 
 .brandName {
-  transition: .4s;
+  transition: all .5s ease;
 }
 
 .sidebar.collapse .brandName {
   opacity: 0;
+  pointer-events: none;
 }
 
 .menu-wrapper .bx {
@@ -767,11 +766,13 @@ video {
   transition: .4s;
   border-radius: 0 16px 16px 0;
   visibility: hidden;
+  z-index: 110;
 }
 
 .bottom-side {
   max-width: 300px;
   width: 300px;
+  transition: all .5s ease;
 }
 
 .bottom-side.collapse {
@@ -791,9 +792,15 @@ video {
 
 .bottom-side.collapse a.user-link {
   margin: 0 auto;
-  display: inline-block;
+  display: flex;
   width: 100%;
   padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.bottom-side.collapse a.user-link .link-name {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .bottom-side.collapse a.user-link ~ .dropdown-blank {
@@ -809,9 +816,9 @@ video {
   display: none;
 }
 
-.bottom-side.collapse a.user-link .link-name {
-  display: none;
-}
+/* .bottom-side.collapse a.user-link .link-name {
+    display: none;
+} */
 
 .bottom-side.collapse a.user-dropdown {
   display: flex;
@@ -828,11 +835,11 @@ video {
   width: 80px;
 }
 
-.sidebar.collapse .nav-link span.link-name {
-  pointer-events: none;
-  white-space: nowrap;
-  opacity: 0;
-}
+/* .sidebar.collapse .nav-link span.link-name {
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: 0;
+} */
 
 .sidebar.collapse .nav-list:hover > .dropdown-blank,
 .sidebar.collapse .nav-list:hover > .dropdown-menu {
@@ -869,10 +876,21 @@ video {
   position: relative;
   left: 300px;
   width: calc(100% - 300px);
+  height: 100vh;
   background-color: red;
+  transition: all .5s ease;
 }
 
 .main-container.expand {
   left: 80px;
   width: calc(100% - 80px);
+}
+
+.navbar {
+  z-index: 99;
+}
+
+.toggle-sidebar {
+  font-size: 30px;
+  padding: 5px;
 }

@@ -2,6 +2,7 @@
     max-width: 300px;
     width: 300px;
     height: calc(100vh - 44px);
+    transition: all .5s ease;
 }
 
 @tailwind base;
@@ -26,7 +27,7 @@
     }
 
     .brandName {
-        @apply text-white text-2xl font-semibold whitespace-nowrap pointer-events-none opacity-100;
+        @apply text-white text-2xl font-semibold whitespace-nowrap pointer-events-none;
     }
 
     .nav-list {
@@ -42,7 +43,7 @@
     }
 
     .link-name {
-        @apply ml-8 transition duration-300 whitespace-nowrap text-lg font-medium;
+        @apply ml-8 transition-all duration-300 whitespace-nowrap text-lg font-medium;
     }
 
     .sidebar.collapse .link-name {
@@ -80,12 +81,14 @@
     height: 40px;
 }
 
+
 .brandName {
-    transition: .4s;
+    transition: all .5s ease;
 }
 
 .sidebar.collapse .brandName {
     opacity: 0;
+    pointer-events: none;
 }
 
 .menu-wrapper .bx {
@@ -137,11 +140,13 @@
     transition: .4s;
     border-radius: 0 16px 16px 0;
     visibility: hidden;
+    z-index: 110;
 }
 
 .bottom-side {
     max-width: 300px;
     width: 300px;
+    transition: all .5s ease;
 }
 
 .bottom-side.collapse {
@@ -161,9 +166,15 @@
 
 .bottom-side.collapse a.user-link {
     margin: 0 auto;
-    display: inline-block;
+    display: flex;
     width: 100%;
     padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.bottom-side.collapse a.user-link .link-name {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .bottom-side.collapse a.user-link ~ .dropdown-blank {
@@ -179,9 +190,9 @@
     display: none;
 }
 
-.bottom-side.collapse a.user-link .link-name {
+/* .bottom-side.collapse a.user-link .link-name {
     display: none;
-}
+} */
 
 .bottom-side.collapse a.user-dropdown {
     display: flex;
@@ -198,11 +209,11 @@
     width: 80px;
 }
 
-.sidebar.collapse .nav-link span.link-name {
+/* .sidebar.collapse .nav-link span.link-name {
     pointer-events: none;
     white-space: nowrap;
     opacity: 0;
-}
+} */
 
 .sidebar.collapse .nav-list:hover > .dropdown-blank,
 .sidebar.collapse .nav-list:hover > .dropdown-menu {
@@ -237,10 +248,21 @@
     position: relative;
     left: 300px;
     width: calc(100% - 300px);
+    height: 100vh;
     background-color: red;
+    transition: all .5s ease;
 }
 
 .main-container.expand {
     left: 80px;
     width: calc(100% - 80px);
+}
+
+.navbar {
+    z-index: 99;
+}
+
+.toggle-sidebar {
+    font-size: 30px;
+    padding: 5px;
 }
