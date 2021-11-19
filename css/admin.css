@@ -340,6 +340,7 @@ span.badges[data-badge]:after {
     visibility: hidden;
     transform: translateY(-25%);
     transition: all .3s ease;
+    z-index: 99;
 }
 
 .nav-user ul.nav-dropdown {
