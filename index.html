@@ -8,6 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./build/admin.css">
+    <link rel="stylesheet" href="./build/page.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- <link rel="stylesheet" href="./dist/css/all.min.css"> -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -16,6 +17,7 @@
     <script src="./dist/js/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <!-- <script src="./dist/js/all.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 </head>
 <body class="body-bg">
@@ -45,7 +47,7 @@
                         </ul>
                     </li>
                     <li class="nav-list dropdown">
-                        <a href="#" class="nav-link">
+                        <a class="nav-link" style="cursor: pointer;">
                             <i class='bx bx-paper-plane'></i>
                             <span class="link-name">Post</span>
                         </a>
@@ -60,7 +62,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-link">
+                                <a href="./page/list-post.html" class="dropdown-link">
                                     <i class='bx bxs-file'></i>
                                     <span class="dropdown-name">List post</span>
                                 </a>
@@ -247,7 +249,58 @@
                 </div>
             </div>
             <div class="content">
-                
+                <h1 class="content-title">Dashboard</h1>
+
+                <div class="header">
+                    <div class="card post">
+                        <div class="card-body">
+                            <h2 class="header-title">Post</h2>
+                            <i class='bx bxs-edit'></i>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../page/list-post.html" class="header-readMore">
+                                <span>See more</span>
+                                <i class='bx bx-right-arrow-alt' ></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card comment">
+                        <div class="card-body">
+                            <h2 class="header-title">Comment</h2>
+                            <i class='bx bxs-comment-detail' ></i>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../page/comment.html" class="header-readMore">
+                                <span>See more</span>
+                                <i class='bx bx-right-arrow-alt' ></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card visitor">
+                        <div class="card-body">
+                            <h2 class="header-title">Visitor</h2>
+                            <i class='bx bx-line-chart'></i>
+                        </div>
+                        <!-- <div class="card-footer">
+                            <a href="../page/list-post.html" class="header-readMore">
+                                <span>See more</span>
+                                <i class='bx bx-right-arrow-alt' ></i>
+                            </a>
+                        </div> -->
+                    </div>
+                    <div class="card user">
+                        <div class="card-body">
+                            <h2 class="header-title">Post</h2>
+                            <i class='bx bxs-edit'></i>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../page/list-post.html" class="header-readMore">
+                                <span>See more</span>
+                                <i class='bx bx-right-arrow-alt' ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="footer">
 
@@ -257,5 +310,6 @@
 
     <!-- Javascript -->
     <script src="./dist/js/admin.js"></script>
+    
 </body>
 </html>
