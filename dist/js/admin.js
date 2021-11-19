@@ -25,3 +25,50 @@ $('.btn-notif').on('click', function() {
 $('.btn-user').on('click', function() {
     $(this).parent().find('.nav-dropdown').toggleClass('showNavDropdown')
 })
+
+// $('.nav-list a').on('click', function(e) {
+//     e.preventDefault();
+
+//     let linkAttr = $(this).attr('href');
+//     console.log(linkAttr);
+//     if(linkAttr != null) {
+//         Swal.fire({
+//             title: "Memuat...",
+//             timer: 1000,
+//             width: "15rem",
+//             didOpen: () => {
+//                 Swal.showLoading()
+//             }
+//         }).then((result) => {
+//             $('div.content').load(linkAttr);
+//         })
+//     }
+// })
+
+
+
+// $(document).ready(function(){
+
+//     $(".nav-list a").click(function(e){
+//         e.preventDefault();
+//         let linkAttr = $(this).attr('href');
+//         console.log(linkAttr);
+//         $.ajax({
+//             success: function(result){
+//             if(linkAttr != null) {
+//                 Swal.fire({
+//                     title: "Memuat...",
+//                     timer: 1000,
+//                     width: "15rem",
+//                     didOpen: () => {
+//                         Swal.showLoading()
+//                     }
+//                 }).then((result) => {
+//                     $('div.content').load(linkAttr);
+//                 })
+//             }
+//           }});
+//       });
+
+      
+// })
