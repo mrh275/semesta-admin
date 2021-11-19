@@ -1,15 +1,114 @@
-.overflow-y-auto {
-  overflow-y: auto
+/* @tailwind utilities; */
+
+.content {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden
+.content .content-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
 
-.scrollbar.overflow-x-hidden {
-  overflow-x: hidden
+.content .header {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.scrollbar-thin.overflow-x-hidden {
-  overflow-x: hidden
+@media (min-width: 640px) {
+  .content .header {
+    justify-content: space-evenly;
+  }
 }
+
+.footer {
+  --tw-bg-opacity: 1;
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 160px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px 20px;
+}
+
+.card .card-body {
+  height: 90%;
+}
+
+.card.post {
+  background-color: #0099ff;
+  color: white;
+}
+
+.card.comment {
+  background-color: #10B981;
+  color: white;
+}
+
+.card.visitor {
+  background-color: #F59E0B;
+}
+
+.card.user {
+  background-color: #6B7280;
+  color: white;
+}
+
+.card .header-title {
+  position: relative;
+  font-size: 26px;
+  font-weight: 600;
+  top: 70px;
+}
+
+.card .card-body i.bx {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 3rem;
+}
+
+.card .card-footer {
+  border-top: 1px solid #000;
+}
+
+.card.post .card-footer,
+.card.comment .card-footer,
+.card.user .card-footer
+{
+  border-top: 1px solid white;
+}
+
+.card-footer .header-readMore {
+  display: flex;
+  align-items: center;
+}
+
+.card-footer .header-readMore > i.bx {
+  font-size: 20px;
+  transition: all .3s ease;
+}
+
+.card-footer .header-readMore:hover > i.bx {
+  transform: translateX(20%);
+}
+
+/* .footer {
+    height: 40px;
+} */
