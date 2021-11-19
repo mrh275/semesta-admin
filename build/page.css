@@ -1,0 +1,15 @@
+.overflow-y-auto {
+  overflow-y: auto
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden
+}
+
+.scrollbar.overflow-x-hidden {
+  overflow-x: hidden
+}
+
+.scrollbar-thin.overflow-x-hidden {
+  overflow-x: hidden
+}
