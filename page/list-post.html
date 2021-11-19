@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Admin Semesta</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../build/admin.css">
+    <link rel="stylesheet" href="../build/page.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="../dist/css/all.min.css"> -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Javascript -->
+    <script src="../dist/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <!-- <script src="../dist/js/all.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+<body class="body-bg">
+    <!-- <div class="" style="display: none;"></div> -->
+    
+    <div class="main-wrapper">
+        <div class="sidebar expand overflow-y-auto overflow-x-hidden">
+            <div class="top-side">
+                <div class="img-top">
+                    <img src="../img/logo.png" alt="Logo Admin">
+                </div>
+                <div class="brand">
+                    <span class="brandName">ADMIN SEMESTA</span>
+                </div>
+            </div>
+            <div class="menu-wrapper">
+                <ul class="nav-menu">
+                    <li class="nav-list">
+                        <a href="../" class="nav-link">
+                            <i class='bx bx-grid-alt'></i>
+                            <span class="link-name">Dashboard</span>
+                        </a>
+                        <ul class="dropdown-blank">
+                            <li>
+                                <a href="../" class="dropdown-link"><span class="link-name-collapse">Dashboard</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list dropdown">
+                        <a class="nav-link" style="cursor: pointer;">
+                            <i class='bx bx-paper-plane'></i>
+                            <span class="link-name">Post</span>
+                        </a>
+                        <ul class="dropdown-menu hide">
+                            <li>
+                                <a href="../" class="dropdown-link"><span class="link-name-collapse">Post</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-link">
+                                    <i class='bx bx-plus-medical' ></i>
+                                    <span class="dropdown-name">Add new post</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../page/list-post.html" class="dropdown-link">
+                                    <i class='bx bxs-file'></i>
+                                    <span class="dropdown-name">List post</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-link">
+                                    <i class='bx bx-book' ></i>
+                                    <span class="dropdown-name">Category</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-link">
+                                    <i class='bx bxs-purchase-tag' ></i>
+                                    <span class="dropdown-name">Tags</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-link">
+                                    <i class='bx bx-comment' ></i>
+                                    <span class="dropdown-name">Comments</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="../" class="nav-link">
+                            <i class='bx bx-file-blank' ></i>
+                            <span class="link-name">Pages</span>
+                        </a>
+                        <ul class="dropdown-blank">
+                            <li>
+                                <a href="../" class="dropdown-link"><span class="link-name-collapse">Pages</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="../" class="nav-link">
+                            <i class='bx bx-images' ></i>
+                            <span class="link-name">Gallery</span>
+                        </a>
+                        <ul class="dropdown-blank">
+                            <li>
+                                <a href="../" class="dropdown-link"><span class="link-name-collapse">Gallery</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="../" class="nav-link">
+                            <i class='bx bx-sitemap'></i>
+                            <span class="link-name">Menu Manager</span>
+                        </a>
+                        <ul class="dropdown-blank">
+                            <li>
+                                <a href="../" class="dropdown-link"><span class="link-name-collapse">Menu Manager</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list">
+                        <a href="../" class="nav-link">
+                            <i class='bx bx-cog' ></i>
+                            <span class="link-name">Setting</span>
+                        </a>
+                        <ul class="dropdown-blank">
+                            <li>
+                                <a href="../" class="dropdown-link"><span class="link-name-collapse">Setting</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list dropdown">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-user'></i>
+                            <span class="link-name">User Manager</span>
+                        </a>
+                        <ul class="dropdown-menu hide">
+                            <li>
+                                <a href="../" class="dropdown-link"><span class="link-name-collapse">User Manager</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-link">
+                                    <i class='bx bxs-user-account' ></i>
+                                    <span class="dropdown-name">User Account</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-link">
+                                    <i class='bx bxs-user-detail' ></i>
+                                    <span class="dropdown-name">User Role</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-link">
+                                    <i class='bx bxs-user-badge' ></i>
+                                    <span class="dropdown-name">User Level</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-side">
+                <ul class="nav-menu">
+                    <li class="nav-list">
+                        <a href="../" class="nav-link user-link">
+                            <img src="../img/no-profile-user.png" alt="" class="user-img">
+                            <span class="link-name">Administrator</span>
+                            <i class='bx bx-log-out' style="margin-left: 20px; font-size: 30px;"></i>
+                        </a>
+                        <ul class="dropdown-blank">
+                            <li>
+                                <a href="../" class="dropdown-link user-dropdown">
+                                    <span class="link-name-collapse">Administrator</span>
+                                    <i class='bx bx-log-out'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="navbar">
+                <button class="toggle-sidebar">
+                    <i class='bx bx-menu'></i>
+                </button>
+                <div class="nav-right">
+                    <div class="notification">
+                        <button class="btn-notif">
+                            <i class='bx bxs-bell'></i>
+                            <span class="badges" data-badge="*"></span>
+                        </button>
+                        <ul class="nav-dropdown">
+                            <li class="nav-drop-list">
+                                <a href="#" class="nav-drop-link">
+                                    <i class='bx bx-comment-error' ></i>
+                                    <span class="nav-drop-name">New comments</span>
+                                </a>
+                            </li>
+                            <hr class="nav-drop-separator">
+                            <li class="nav-drop-list">
+                                <a href="#" class="nav-drop-link">
+                                    <i class='bx bx-comment-error' ></i>
+                                    <span class="nav-drop-name">New comments</span>
+                                </a>
+                            </li>
+                            <hr class="nav-drop-separator">
+                            <li class="nav-drop-list">
+                                <a href="#" class="nav-drop-link">
+                                    <i class='bx bx-comment-error' ></i>
+                                    <span class="nav-drop-name">New comments</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-user">
+                        <button class="btn-user">
+                            <i class='bx bxs-user'></i>
+                        </button>
+                        <ul class="nav-dropdown">
+                            <li class="nav-drop-list nav-drop-username">
+                                <span class="nav-drop-name">Administrator</span>
+                            </li>
+                            <li class="nav-drop-list">
+                                <a href="#" class="nav-drop-link">
+                                    <i class='bx bxs-user' ></i>
+                                    <span class="nav-drop-name">Profile</span>
+                                </a>
+                            </li>
+                            <hr class="nav-drop-separator">
+                            <li class="nav-drop-list">
+                                <a href="#" class="nav-drop-link">
+                                    <i class='bx bx-key' ></i>
+                                    <span class="nav-drop-name">Change password</span>
+                                </a>
+                            </li>
+                            <hr class="nav-drop-separator">
+                            <li class="nav-drop-list">
+                                <a href="#" class="nav-drop-link">
+                                    <i class='bx bx-log-out' ></i>
+                                    <span class="nav-drop-name">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h1 class="content-title">Dashboard</h1>
+
+                <div class="header">
+                    <div class="card post">
+                        <div class="card-body">
+                            <h2 class="header-title">Post</h2>
+                            <i class='bx bxs-edit'></i>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../page/list-post.html" class="header-readMore" onclick="showMore()">
+                                <span>See more</span>
+                                <i class='bx bx-right-arrow-alt' ></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card comment">
+                        <div class="card-body">
+                            <h2 class="header-title">Comment</h2>
+                            <i class='bx bxs-comment-detail' ></i>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../page/list-post.html" class="header-readMore" onclick="showMore()">
+                                <span>See more</span>
+                                <i class='bx bx-right-arrow-alt' ></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card visitor">
+                        <div class="card-body">
+                            <h2 class="header-title">Visitor</h2>
+                            <i class='bx bx-line-chart'></i>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../page/list-post.html" class="header-readMore" onclick="showMore()">
+                                <span>See more</span>
+                                <i class='bx bx-right-arrow-alt' ></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card user">
+                        <div class="card-body">
+                            <h2 class="header-title">Post</h2>
+                            <i class='bx bxs-edit'></i>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../page/list-post.html" class="header-readMore" onclick="showMore()">
+                                <span>See more</span>
+                                <i class='bx bx-right-arrow-alt' ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="../dist/js/admin.js"></script>
+    
+</body>
+</html>
