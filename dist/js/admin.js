@@ -72,3 +72,45 @@ $('.btn-user').on('click', function() {
 
       
 // })
+
+// Popular post vertical carousel
+$("div.popular-post-body").slick({
+    vertical: true,
+    accessibility: false,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    infinite: true,
+  });
+
+//   Visitor chart
+const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Weekly Statistics',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+  const config = {
+    type: 'line',
+    data: data,
+    options: {
+        responsive: true,
+    }
+  };
+  const myChart = new Chart(
+    document.getElementById('visitor-chart'),
+    config
+  );
