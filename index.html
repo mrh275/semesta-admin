@@ -9,15 +9,17 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./build/admin.css">
     <link rel="stylesheet" href="./build/page.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="./dist/css/all.min.css"> -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <!-- Javascript -->
     <script src="./dist/js/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <!-- <script src="./dist/js/all.min.js"></script> -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
 </head>
 <body class="body-bg">
@@ -301,6 +303,84 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="statistics">
+                    <div class="popular-post-wrapper stat-card">
+                        <div class="popular-post-head">
+                            <h3 class="popular-post-title">Popular Post</h3>
+                        </div>
+                        <div class="popular-post-body">
+                            <div class="popular-post-card">
+                                <div class="card-img">
+                                    <img src="./img/img-1.jpg" alt="Images 1" class="popular-post-img">
+                                </div>
+                                <div class="card-text">
+                                    <h4 class="post-title">Judul Postingan 1</h4>
+                                    <span class="popular-post-sub">
+                                        <i class='bx bxs-user'></i> <span class="author">Penulis</span>
+                                        <i class='bx bxs-calendar'></i> <span class="date-posted">21 Oktober 2021</span>
+                                        <i class="fa fa-eye"></i> <spam class="views">999 Views</spam>
+                                      </span>
+                                      
+                                </div>
+                            </div>
+
+                            <div class="popular-post-card">
+                                <div class="card-img">
+                                    <img src="./img/img-2.jpg" alt="Images 2" class="popular-post-img">
+                                </div>
+                                <div class="card-text">
+                                    <h4 class="post-title">Judul Postingan 2</h4>
+                                    <span class="popular-post-sub">
+                                        <i class='bx bxs-user'></i> <span class="author">Penulis</span>
+                                        <i class='bx bxs-calendar'></i> <span class="date-posted">21 Oktober 2021</span>
+                                        <i class="fa fa-eye"></i> <spam class="views">999 Views</spam>
+                                      </span>
+                                      
+                                </div>
+                            </div>
+
+                            <div class="popular-post-card">
+                                <div class="card-img">
+                                    <img src="./img/img-3.jpg" alt="Images 3" class="popular-post-img">
+                                </div>
+                                <div class="card-text">
+                                    <h4 class="post-title">Judul Postingan 3</h4>
+                                    <span class="popular-post-sub">
+                                        <i class='bx bxs-user'></i> <span class="author">Penulis</span>
+                                        <i class='bx bxs-calendar'></i> <span class="date-posted">21 Oktober 2021</span>
+                                        <i class="fa fa-eye"></i> <spam class="views">999 Views</spam>
+                                      </span>
+                                      
+                                </div>
+                            </div>
+
+                            <div class="popular-post-card">
+                                <div class="card-img">
+                                    <img src="./img/img-4.jpg" alt="Images 4" class="popular-post-img">
+                                </div>
+                                <div class="card-text">
+                                    <h4 class="post-title">Judul Postingan 4</h4>
+                                    <span class="popular-post-sub">
+                                        <i class='bx bxs-user'></i> <span class="author">Penulis</span>
+                                        <i class='bx bxs-calendar'></i> <span class="date-posted">21 Oktober 2021</span>
+                                        <i class="fa fa-eye"></i> <spam class="views">999 Views</spam>
+                                      </span>
+                                      
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="visitor-chart stat-card">
+                        <div class="visitor-chart-header">
+                            <h4 class="visitor-title">Visitor Statistics</h4>
+                        </div>
+                        <div class="visitor-chart-body">
+                            <canvas id="visitor-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="footer">
 
@@ -309,7 +389,7 @@
     </div>
 
     <!-- Javascript -->
+    <script src="./node_modules/chart.js/dist/chart.js"></script>
     <script src="./dist/js/admin.js"></script>
-    
 </body>
 </html>
