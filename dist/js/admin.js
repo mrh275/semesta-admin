@@ -87,20 +87,20 @@ $("div.popular-post-body").slick({
 
 //   Visitor chart
 const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
+    'Juli',
+    'Agustus',
+    'September',
+    'Oktober',
+    'November',
+    'Desember'
   ];
   const data = {
     labels: labels,
     datasets: [{
-      label: 'Weekly Statistics',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+      label: 'Pengunjung',
+      backgroundColor: '#0099ff',
+      borderColor: '#0099ff',
+      data: [70, 30, 54, 70, 120, 210, 463],
     }]
   };
   const config = {
@@ -108,6 +108,12 @@ const labels = [
     data: data,
     options: {
         responsive: true,
+        plugin: {
+          title: {
+            display: true,
+            text: "Data pengunjung bulanan"
+          },
+        },
     }
   };
   const myChart = new Chart(
