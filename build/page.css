@@ -1,12 +1,21 @@
 /* @tailwind utilities; */
 
 .content {
+  overflow-x: hidden;
   --tw-bg-opacity: 1;
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.scrollbar.content {
+  overflow-x: hidden;
+}
+
+.scrollbar-thin.content {
+  overflow-x: hidden;
 }
 
 .content .content-title {
@@ -43,7 +52,7 @@
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 .statistics .stat-card.popular-post-wrapper {
@@ -133,6 +142,17 @@
   color: white;
 }
 
+.card .count-number {
+  position: absolute;
+  top: 10px;
+  font-size: 48px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0;
+  font-weight: 600;
+}
+
 .card .header-title {
   position: relative;
   font-size: 26px;
@@ -182,6 +202,19 @@
 
 .popular-post-body .popular-post-card.slick-slide {
   display: flex !important;
+}
+
+.total-visitor {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #6B7280;
+}
+
+canvas#visitor-chart {
+  width: 100%;
+  height: 40vh !important;
+  margin: 10px 0 10px 0;
 }
 
 /* .footer {
