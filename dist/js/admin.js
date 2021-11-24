@@ -5,7 +5,23 @@ $('.toggle-sidebar').on('click', () => {
     $('.sidebar').toggleClass('overflow-y-auto');
     $('.bottom-side').toggleClass('collapse');
     $('.main-container').toggleClass('expand');
+    // $('.navbar').toggleClass('expand');
 })
+
+// Navbar sticky on scroll
+let lastScrollTop = 0;
+$(window).scroll(function(event){
+  let st = $(this).scrollTop();
+  if(st > lastScrollTop) {
+    // $('.navbar').removeClass('absolute');
+    $('.navbar').addClass('fixed');
+    $('.navbar').addClass('sticky');
+  } else {
+    $('.navbar').removeClass('sticky');
+    $('.navbar').removeClass('fixed');
+    // $('.navbar').addClass('absolute');
+  }
+});
 
 // Dropdown toggle
 $('ul.nav-menu').on('click', '.dropdown', function() {
