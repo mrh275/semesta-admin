@@ -275,6 +275,11 @@
     box-shadow: 2px 3px 6px #39485e70;
 }
 
+/* .navbar.sticky {
+    /* top:0; */
+    /* width: 100vw; */
+/* } */
+
 .toggle-sidebar {
     display: flex;
     justify-content: center;
@@ -367,6 +372,11 @@ span.badges[data-badge]:after {
     opacity: 1;
     visibility: visible;
     transform: translateY(0%);
+}
+
+.notification ul.nav-dropdown a.nav-drop-link {
+    padding-left: 5px;
+    padding-right: 8px;
 }
 
 li.nav-drop-list {
