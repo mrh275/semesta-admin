@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Admin Semesta</title>
+    <title>List Post | Admin Semesta</title>
+
+    <link rel="shortcut icon" href="../img/favicon.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../build/admin.css">
     <link rel="stylesheet" href="../build/page.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="../dist/css/all.min.css"> -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
     <!-- Javascript -->
     <script src="../dist/js/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <!-- <script src="../dist/js/all.min.js"></script> -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     
 </head>
 <body class="body-bg">
-    <!-- <div class="" style="display: none;"></div> -->
+    <div class="fixed" style="display: none;"></div>
     
     <div class="main-wrapper">
         <div class="sidebar expand overflow-y-auto overflow-x-hidden">
@@ -249,67 +255,92 @@
                 </div>
             </div>
             <div class="content">
-                <h1 class="content-title">Dashboard</h1>
+                <h1 class="content-title">List Post</h1>
 
-                <div class="header">
-                    <div class="card post">
-                        <div class="card-body">
-                            <h2 class="header-title">Post</h2>
-                            <i class='bx bxs-edit'></i>
-                        </div>
-                        <div class="card-footer">
-                            <a href="../page/list-post.html" class="header-readMore" onclick="showMore()">
-                                <span>See more</span>
-                                <i class='bx bx-right-arrow-alt' ></i>
+                <div class="first-container">
+                    <div class="single-card">
+                        <div class="single-card-header">
+                            <a href="javascript:void(0)" class="btn btn-primary">
+                                <i class='bx bx-plus-medical'></i>
+                                <span>Tambah Post</span>
                             </a>
                         </div>
-                    </div>
-                    <div class="card comment">
-                        <div class="card-body">
-                            <h2 class="header-title">Comment</h2>
-                            <i class='bx bxs-comment-detail' ></i>
-                        </div>
-                        <div class="card-footer">
-                            <a href="../page/list-post.html" class="header-readMore" onclick="showMore()">
-                                <span>See more</span>
-                                <i class='bx bx-right-arrow-alt' ></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card visitor">
-                        <div class="card-body">
-                            <h2 class="header-title">Visitor</h2>
-                            <i class='bx bx-line-chart'></i>
-                        </div>
-                        <div class="card-footer">
-                            <a href="../page/list-post.html" class="header-readMore" onclick="showMore()">
-                                <span>See more</span>
-                                <i class='bx bx-right-arrow-alt' ></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card user">
-                        <div class="card-body">
-                            <h2 class="header-title">Post</h2>
-                            <i class='bx bxs-edit'></i>
-                        </div>
-                        <div class="card-footer">
-                            <a href="../page/list-post.html" class="header-readMore" onclick="showMore()">
-                                <span>See more</span>
-                                <i class='bx bx-right-arrow-alt' ></i>
-                            </a>
+                        <div class="single-card-body">
+                            <table class="list-posts">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Kategori</th>
+                                        <th>Judul/Link</th>
+                                        <th>Aktif</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Berita</td>
+                                        <td>
+                                            <p class="para-post">
+                                                <h4 class="post-title">Judul Postingan</h4>
+                                                <a href="https://sman1rawamerta.sch.id/detailpost/7-ide-beri-edukasi-keuangan-kepada-anak" class="link-post">
+                                                    https://sman1rawamerta.sch.id/detailpost/7-ide-beri-edukasi-keuangan-kepada-anak
+                                                </a>
+                                            </p>
+                                            <div class="action-btn-post">
+                                                <button class="btn-sm btn-secondary">
+                                                    <i class='bx bxs-user' ></i>
+                                                    <span>User 1</span>
+                                                </button>
+                                                <button class="btn-sm btn-secondary">
+                                                    <i class='bx bxs-calendar' ></i>
+                                                    <span>31 Oktober 2021</span>
+                                                </button>
+                                                <button class="btn-sm btn-secondary">
+                                                    <i class='fa fa-eye' ></i>
+                                                    <span>999</span>
+                                                </button>
+                                                <button class="btn-sm btn-secondary">
+                                                    <i class='bx bxs-star' ></i>
+                                                    <span>Set as Headline</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>Y</td>
+                                        <td>
+                                            <div class="action-btn-post action-btn-wrapper">
+                                                <button class="btn-sm btn-bookmark">
+                                                    <i class='bx bxs-star' ></i>
+                                                </button>
+                                                <button class="btn-sm btn-success">
+                                                    <i class='bx bxs-pencil' ></i>
+                                                </button>
+                                                <button class="btn-sm btn-danger">
+                                                    <i class='bx bxs-trash' ></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
+
+                <div class="second-container">
+                    
+                </div>
+                
             </div>
             <div class="footer">
-
+                <span>Copyright 2021 &copy; SMAN 1 Rawamerta. All right reserved.</span>
+                <span class="creator">Made with <i class='bx bxs-heart'></i> by Muhamad Ramdani H.</span>
             </div>
         </div>
     </div>
 
     <!-- Javascript -->
+    <script src="../node_modules/chart.js/dist/chart.js"></script>
     <script src="../dist/js/admin.js"></script>
-    
 </body>
 </html>
