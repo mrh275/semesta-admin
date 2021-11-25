@@ -1,31 +1,75 @@
+.btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.btn-sm {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px;
+}
+
+.btn-primary {
+    background-color: #0099ff;
+    color: white;
+}
+
+.btn-success {
+    background-color: #10B981;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #9CA3AF;
+    color: #F9FAFB;
+    transition: all .3s ease;
+}
+
+.btn-bookmark {
+    background-color: #F59E0B;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #DC2626;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #6B7280
+}
+
 /* @tailwind utilities; */
 @tailwind components;
 
 @layer components {
 
     .content {
-        @apply bg-gray-200 px-5 py-3 overflow-x-hidden;
+        @apply bg-gray-200 px-5 py-3 overflow-x-hidden pb-8;
     }
 
     .content .content-title {
-        @apply text-2xl font-semibold text-gray-700;
+        @apply text-3xl font-semibold text-gray-700;
     }
 
     .content .header {
         @apply flex justify-between sm:justify-evenly flex-wrap my-2
     }
 
-    .content .statistics,
+    .content .first-container,
     .content .second-container {
         @apply w-full rounded-xl flex justify-between;
     }
 
-    .statistics .stat-card,
+    .first-container .stat-card,
     .second-container .stat-card {
         @apply w-1/2 bg-white p-4 rounded-xl;
     }
 
-    .statistics .stat-card.popular-post-wrapper {
+    .first-container .stat-card.popular-post-wrapper {
         @apply mr-3 block;
     }
 
@@ -35,7 +79,7 @@
         @apply mb-4 text-2xl font-bold text-primary;
     }
 
-    .statistics .stat-card.visitor-chart {
+    .first-container .stat-card.visitor-chart {
         @apply ml-3 block;
     }
 
@@ -81,6 +125,10 @@
 
     .post-comment {
         @apply text-sm text-gray-600 inline;
+    }
+
+    .first-container .single-card {
+        @apply bg-white w-full rounded-lg p-5;
     }
 
     .footer {
@@ -249,6 +297,60 @@ hr.comment-break {
     border-radius: 2px;
 }
 
+/* Single Card */
+.single-card {
+    margin-top: 20px;
+    background-color: white;
+}
+
+.single-card-body {
+    margin-top: 25px;
+}
+
+.list-posts td {
+    text-align: center;
+}
+
+.list-posts tbody td:nth-child(3) {
+    text-align: left;
+}
+
+.list-posts tbody td .post-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.list-posts tbody td .link-post,
+.list-posts tbody td button {
+    font-size: .9rem;
+}
+
+.action-btn-post {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.action-btn-post .btn-sm:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+
+}
+
+.action-btn-post .btn-sm:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.action-btn-wrapper .btn-sm:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.action-btn-wrapper .btn-sm:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
 .footer {
     height: 56px;
     color: white;
@@ -256,6 +358,7 @@ hr.comment-break {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer .bxs-heart {

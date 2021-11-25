@@ -1,3 +1,47 @@
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.btn-sm {
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px;
+}
+
+.btn-primary {
+  background-color: #0099ff;
+  color: white;
+}
+
+.btn-success {
+  background-color: #10B981;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #9CA3AF;
+  color: #F9FAFB;
+  transition: all .3s ease;
+}
+
+.btn-bookmark {
+  background-color: #F59E0B;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #DC2626;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #6B7280
+}
+
 /* @tailwind utilities; */
 
 .content {
@@ -8,6 +52,7 @@
   padding-right: 1.25rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  padding-bottom: 2rem;
 }
 
 .scrollbar.content {
@@ -19,8 +64,8 @@
 }
 
 .content .content-title {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgba(55, 65, 81, var(--tw-text-opacity));
@@ -40,14 +85,14 @@
   }
 }
 
-.content .statistics, .content .second-container {
+.content .first-container, .content .second-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
   border-radius: 0.75rem;
 }
 
-.statistics .stat-card, .second-container .stat-card {
+.first-container .stat-card, .second-container .stat-card {
   width: 50%;
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
@@ -55,7 +100,7 @@
   padding: 1rem;
 }
 
-.statistics .stat-card.popular-post-wrapper {
+.first-container .stat-card.popular-post-wrapper {
   margin-right: 0.75rem;
   display: block;
 }
@@ -69,7 +114,7 @@
   color: rgba(0, 153, 255, var(--tw-text-opacity));
 }
 
-.statistics .stat-card.visitor-chart {
+.first-container .stat-card.visitor-chart {
   margin-left: 0.75rem;
   display: block;
 }
@@ -130,6 +175,14 @@
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
+.first-container .single-card {
+  width: 100%;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  padding: 1.25rem;
 }
 
 .footer {
@@ -299,6 +352,60 @@ hr.comment-break {
   border-radius: 2px;
 }
 
+/* Single Card */
+
+.single-card {
+  margin-top: 20px;
+  background-color: white;
+}
+
+.single-card-body {
+  margin-top: 25px;
+}
+
+.list-posts td {
+  text-align: center;
+}
+
+.list-posts tbody td:nth-child(3) {
+  text-align: left;
+}
+
+.list-posts tbody td .post-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.list-posts tbody td .link-post,
+.list-posts tbody td button {
+  font-size: .9rem;
+}
+
+.action-btn-post {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.action-btn-post .btn-sm:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.action-btn-post .btn-sm:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.action-btn-wrapper .btn-sm:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.action-btn-wrapper .btn-sm:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
 .footer {
   height: 56px;
   color: white;
@@ -306,6 +413,7 @@ hr.comment-break {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer .bxs-heart {
