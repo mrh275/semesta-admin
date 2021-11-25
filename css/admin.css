@@ -23,6 +23,7 @@
 @tailwind utilities;
 
 @layer components {
+
     .sidebar {
         @apply bg-gray-800 fixed z-50;
     }
