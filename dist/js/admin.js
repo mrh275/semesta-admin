@@ -9,19 +9,19 @@ $('.toggle-sidebar').on('click', () => {
 })
 
 // Navbar sticky on scroll
-let lastScrollTop = 0;
-$(window).scroll(function(event){
-  let st = $(this).scrollTop();
-  if(st > lastScrollTop) {
-    // $('.navbar').removeClass('absolute');
-    $('.navbar').addClass('fixed');
-    $('.navbar').addClass('sticky');
-  } else {
-    $('.navbar').removeClass('sticky');
-    $('.navbar').removeClass('fixed');
-    // $('.navbar').addClass('absolute');
-  }
-});
+// let lastScrollTop = 0;
+// $(window).scroll(function(event){
+//   let st = $(this).scrollTop();
+//   if(st > lastScrollTop) {
+//     // $('.navbar').removeClass('absolute');
+//     $('.navbar').addClass('fixed');
+//     $('.navbar').addClass('sticky');
+//   } else {
+//     $('.navbar').removeClass('sticky');
+//     $('.navbar').removeClass('fixed');
+//     // $('.navbar').addClass('absolute');
+//   }
+// });
 
 // Dropdown toggle
 $('ul.nav-menu').on('click', '.dropdown', function() {
@@ -136,3 +136,8 @@ const labels = [
     document.getElementById('visitor-chart'),
     config
   );
+
+  // List Post Datatable
+  $(document).ready(function() {
+    $('.list-posts').DataTable();
+} );
