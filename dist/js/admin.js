@@ -139,5 +139,17 @@ const labels = [
 
   // List Post Datatable
   $(document).ready(function() {
-    $('.list-posts').DataTable();
+    $('.list-posts').DataTable({
+      "lengthMenu": [
+        [5, 10, 25, 50, 100, -1],
+        [5, 10, 25, 50, 100, "All"]
+      ],
+      "pagingType": "full_numbers",
+      "language": {
+        "paginate": {
+          "previous": "<i class='bx bx-chevron-left'></i>",
+          "next": "<i class='bx bx-chevron-right' ></i>"
+        }
+      }
+    });
 } );
