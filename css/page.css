@@ -176,6 +176,10 @@
         @apply text-green-500;
     }
 
+    .first-container .single-card .add-new-post {
+        @apply hover:bg-primary-dark transition duration-300;
+    }
+
     .footer {
         @apply bg-gray-700;
     }
