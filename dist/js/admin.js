@@ -24,11 +24,20 @@ $('.toggle-sidebar').on('click', () => {
 // });
 
 // Dropdown toggle
-$('ul.nav-menu').on('click', '.dropdown', function() {
-    $(this).find('.dropdown-menu').toggleClass('show', 300);
-    $(this).find('.dropdown-menu').toggleClass('hide', 300);
-    $(this).find('.dropdown-menu').prev().toggleClass('active-open');
+$('.sidebar.expand ul.nav-menu').on('click', '.dropdown', function() {
+  $(this).find('.dropdown-menu').toggleClass('show', 300);
+  $(this).find('.dropdown-menu').toggleClass('hide', 300);
+  $(this).find('.dropdown-menu').prev().toggleClass('active');
 })
+
+// Prevent dropdown-menu close when click inside
+$('.dropdown-menu').on('click', function(e) {
+e.stopPropagation();
+})
+
+// $('.sidebar.expand ul.nav-menu').on('click', '.dropdown', function(e) {
+//   e.stopPropagation();
+// })
 
 $('.sidebar.collapse li.dropdown').hover( function() {
     $(this).find('.dropdown-menu').toggleClass('showMenu');

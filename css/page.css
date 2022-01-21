@@ -89,7 +89,7 @@
 @layer components {
 
     .content {
-        @apply bg-gray-200 px-5 py-3 overflow-x-hidden pb-8;
+        @apply bg-gray-200 px-5 pt-5 overflow-x-hidden pb-8;
     }
 
     .content .content-title {
@@ -97,21 +97,106 @@
     }
 
     .content .header {
-        @apply flex justify-between sm:justify-evenly flex-wrap my-2
+        @apply flex justify-evenly sm:justify-evenly flex-wrap my-2
     }
 
+    /* Full Container */
+    .container {
+        @apply w-full my-4 p-5 rounded-lg bg-gray-100 shadow-md;
+    }
+    
+    /* Form */
+    .form-wrapper {
+        @apply lg:flex mb-4;
+    }
+
+    .label-wrapper {
+        @apply w-full lg:w-3/12 flex items-center;
+    }
+
+    .label-form {
+        @apply text-lg text-gray-600 font-medium;
+    }
+
+    .input-wrapper {
+        @apply w-full lg:w-9/12 flex items-center;
+    }
+
+    .form-control {
+        @apply w-full rounded-md border border-gray-400 focus:ring focus:outline-none focus:ring-offset-0 focus:ring-primary/70 transition duration-200 p-1 px-2;
+    }
+
+    .form-control[readonly],
+    .form-control[disabled] {
+        @apply cursor-not-allowed;
+    }
+
+    .button-wrapper {
+        @apply flex justify-end;
+    }
+
+    /* Form Orangtua */
+    .ayah-title, .ibu-title {
+        @apply text-gray-600 text-2xl font-semibold mb-4
+    }
+
+    .ibu-title {
+        @apply mt-8;
+    }
+
+    /* Datatable */
+    .table-biodata {
+        @apply table-auto text-center border-collapse border-gray-700 rounded-sm;
+    }
+
+    .table-biodata thead tr {
+        @apply bg-gray-700 text-white;
+    }
+
+    .table-biodata tbody tr {
+        @apply cursor-pointer;
+    }
+
+    .table-biodata.dataTable.stripe tbody tr.even,
+    .table-biodata.dataTable.stripe tbody tr.odd {
+        @apply active:bg-orange-300;
+    }
+
+    .table-biodata.dataTable.hover tbody tr.even:hover,
+    .table-biodata.dataTable.hover tbody tr.odd:hover {
+        @apply bg-blue-200;
+    }
+
+    .table-biodata.dataTable.stripe tbody tr.even {
+        @apply bg-gray-300
+    }
+
+    .table-biodata.dataTable tbody tr.even.selected,
+    .table-biodata.dataTable.stripe tbody tr.odd.selected {
+        @apply bg-orange-200 !important;
+    }
+
+    .table-biodata td, .table-biodata th {
+        @apply border-gray-600 px-2 py-1;
+    }
+
+    .table-biodata .nama {
+        @apply text-left;
+    }
+
+    /* Half Container */
     .content .first-container,
     .content .second-container {
-        @apply w-full rounded-xl flex justify-between;
+        @apply w-full rounded-xl xl:flex justify-between;
     }
 
     .first-container .stat-card,
     .second-container .stat-card {
-        @apply w-1/2 bg-white p-4 rounded-xl;
+        @apply w-full bg-white p-4 rounded-xl xl:w-1/2;
     }
 
     .first-container .stat-card.popular-post-wrapper {
-        @apply mr-3 block;
+        @apply xl:mr-3 block;
     }
 
     .popular-post-title,
@@ -121,7 +206,7 @@
     }
 
     .first-container .stat-card.visitor-chart {
-        @apply ml-3 block;
+        @apply xl:ml-3 mt-4 xl:mt-0 block;
     }
 
     .popular-post-card {
@@ -153,7 +238,7 @@
     }
 
     .second-container .stat-card:nth-child(2) {
-        @apply ml-3;
+        @apply xl:ml-3;
     }
 
     .stat-card.comment-preview .comment-view-card {
@@ -186,9 +271,9 @@
 
 }
 
-/* .content {
-    padding-top: 67px;
-} */
+.navbar.fixed ~ .content {
+    padding-top: 75px;
+}
 
 .card {
     position: relative;
@@ -346,12 +431,6 @@ hr.comment-break {
     border-radius: 2px;
 }
 
-/* Single Card */
-/* .single-card {
-    margin-top: 20px;
-    background-color: white;
-} */
-
 .single-card-body {
     margin-top: 25px;
 }
@@ -424,15 +503,34 @@ hr.comment-break {
 
 /* Datatable Properties */
 
-.dataTables_wrapper .dataTables_filter input {
+.dataTables_wrapper .dataTables_length select {
     border-radius: 10px !important;
-    transition: .2s;
-    padding: 5px 11px !important;
+    transition: .3s;
+    padding: 5px 2px !important;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.dataTables_wrapper .dataTables_filter input:focus {
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 10px !important;
+    transition: .3s;
+    padding: 5px 11px !important;
+    margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus, .dataTables_wrapper .dataTables_length select:focus {
     outline-offset: 0;
     outline-color: #0099ff;
+}
+
+/* Table Number Increment */
+table {
+    counter-reset: section;
+}
+
+.number::before {
+    counter-increment: section;
+    content:counter(section);
 }
 
 /* Pagination */
@@ -487,4 +585,38 @@ hr.comment-break {
     background: #0099ff;
     border: none;
     color: white !important;
+}
+
+/* Display Size Modifier */
+@media (max-width: 767px) {
+    .popular-post-body .popular-post-card.slick-slide {
+        display: block !important;
+    }
+
+    .popular-post-img {
+        min-width: 90px;
+        max-width: 235px;
+        border-radius: 5px;
+    }
+
+    .footer {
+        height: max-content;
+        justify-content: center;
+    }
+
+    .footer span {
+        text-align: center;
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        height: max-content;
+        justify-content: center;
+    }
+
+    .footer span {
+        text-align: center;
+    }
 }

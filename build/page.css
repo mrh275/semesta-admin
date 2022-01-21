@@ -93,8 +93,7 @@
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 1.25rem;
   padding-bottom: 2rem;
 }
 
@@ -119,7 +118,7 @@
   margin-bottom: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 @media (min-width: 640px) {
@@ -128,24 +127,50 @@
   }
 }
 
+/* Full Container */
+
+/* Form */
+
+/* Form Orangtua */
+
+/* Datatable */
+
+/* Half Container */
+
 .content .first-container, .content .second-container {
-  display: flex;
   width: 100%;
   justify-content: space-between;
   border-radius: 0.75rem;
 }
 
+@media (min-width: 1280px) {
+  .content .first-container, .content .second-container {
+    display: flex;
+  }
+}
+
 .first-container .stat-card, .second-container .stat-card {
-  width: 50%;
+  width: 100%;
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
   padding: 1rem;
 }
 
+@media (min-width: 1280px) {
+  .first-container .stat-card, .second-container .stat-card {
+    width: 50%;
+  }
+}
+
 .first-container .stat-card.popular-post-wrapper {
-  margin-right: 0.75rem;
   display: block;
+}
+
+@media (min-width: 1280px) {
+  .first-container .stat-card.popular-post-wrapper {
+    margin-right: 0.75rem;
+  }
 }
 
 .popular-post-title, .visitor-chart-header, .comment-preview-title {
@@ -158,8 +183,18 @@
 }
 
 .first-container .stat-card.visitor-chart {
-  margin-left: 0.75rem;
+  margin-top: 1rem;
   display: block;
+}
+
+@media (min-width: 1280px) {
+  .first-container .stat-card.visitor-chart {
+    margin-left: 0.75rem;
+  }
+
+  .first-container .stat-card.visitor-chart {
+    margin-top: 0px;
+  }
 }
 
 .popular-post-card {
@@ -200,8 +235,10 @@
   margin-right: 0.75rem;
 }
 
-.second-container .stat-card:nth-child(2) {
-  margin-left: 0.75rem;
+@media (min-width: 1280px) {
+  .second-container .stat-card:nth-child(2) {
+    margin-left: 0.75rem;
+  }
 }
 
 .stat-card.comment-preview .comment-view-card {
@@ -253,9 +290,9 @@
   background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
 
-/* .content {
-    padding-top: 67px;
-} */
+.navbar.fixed ~ .content {
+  padding-top: 75px;
+}
 
 .card {
   position: relative;
@@ -415,13 +452,6 @@ hr.comment-break {
   border-radius: 2px;
 }
 
-/* Single Card */
-
-/* .single-card {
-    margin-top: 20px;
-    background-color: white;
-} */
-
 .single-card-body {
   margin-top: 25px;
 }
@@ -493,15 +523,35 @@ hr.comment-break {
 
 /* Datatable Properties */
 
-.dataTables_wrapper .dataTables_filter input {
+.dataTables_wrapper .dataTables_length select {
   border-radius: 10px !important;
-  transition: .2s;
-  padding: 5px 11px !important;
+  transition: .3s;
+  padding: 5px 2px !important;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.dataTables_wrapper .dataTables_filter input:focus {
+.dataTables_wrapper .dataTables_filter input {
+  border-radius: 10px !important;
+  transition: .3s;
+  padding: 5px 11px !important;
+  margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus, .dataTables_wrapper .dataTables_length select:focus {
   outline-offset: 0;
   outline-color: #0099ff;
+}
+
+/* Table Number Increment */
+
+table {
+  counter-reset: section;
+}
+
+.number::before {
+  counter-increment: section;
+  content:counter(section);
 }
 
 /* Pagination */
@@ -557,4 +607,43 @@ hr.comment-break {
   background: #0099ff;
   border: none;
   color: white !important;
+}
+
+/* Display Size Modifier */
+
+@media (max-width: 767px) {
+  .popular-post-body .popular-post-card.slick-slide {
+    display: block !important;
+  }
+
+  .popular-post-img {
+    min-width: 90px;
+    max-width: 235px;
+    border-radius: 5px;
+  }
+
+  .footer {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    justify-content: center;
+  }
+
+  .footer span {
+    text-align: center;
+    font-size: .6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    justify-content: center;
+  }
+
+  .footer span {
+    text-align: center;
+  }
 }

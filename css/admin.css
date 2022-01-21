@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 *::-webkit-scrollbar {
     width: 10px;
 }
@@ -24,6 +26,7 @@
 
 @layer components {
 
+    /* Sidebar */
     .sidebar {
         @apply bg-gray-800 fixed z-50;
     }
@@ -64,14 +67,24 @@
         @apply pointer-events-none opacity-0 invisible;
     }
 
-    .active-open {
-        background-color: white;
-        color: #0099ff;
+    .sidebar.collapse .dropdown-link.active-open,
+    .sidebar.collapse .nav-link.active {
+        @apply text-primary;
     }
 
     .bottom-side {
         @apply fixed bottom-0 flex bg-gray-700 items-center justify-between;
     }
+}
+
+.active {
+    background: white;
+    color: #1f2937;
+}
+
+.active-open {
+    background-color: white;
+    color: #0099ff;
 }
 
 
@@ -110,6 +123,10 @@
     font-size: 25px;
 }
 
+.menu-wrapper .fa {
+    font-size: 21px;
+}
+
 .sidebar.collapse ul.dropdown-menu {
     position: absolute;
     top: 10px;
@@ -140,8 +157,22 @@
     font-size: 16px;
 }
 
+.nav-link i.bx {
+    transition: all .2s ease-in-out;
+}
+
+.nav-link i.fa {
+    transition: all .2s ease-in-out;
+}
+
 .dropdown-link i.bx {
     font-size: 18px;
+    transition: all .2s ease-in-out;
+}
+
+.dropdown-link i.fa {
+    font-size: 15px;
+    transition: all .2s ease-in-out;
 }
 
 .dropdown-blank {
@@ -273,13 +304,18 @@
     height: 55px;
     z-index: 99;
     background-color: #d1d5db;
+    right: 0;
+    transition: all .5s;
+}
+
+.navbar.fixed {
+    width: calc(100% - 300px);
     box-shadow: 2px 3px 6px #39485e70;
 }
 
-/* .navbar.sticky {
-    /* top:0; */
-    /* width: 100vw; */
-/* } */
+.main-container.expand .navbar.fixed {
+    width: calc(100% - 81px);
+}
 
 .toggle-sidebar {
     display: flex;
@@ -411,4 +447,31 @@ ul.nav-dropdown a.nav-drop-link .nav-drop-name {
 
 hr.nav-drop-separator {
     border-top: 2px solid #5b5d6370;
+}
+
+@media (max-width: 767px) {
+    .main-container.expand {
+        margin-left: 80px;
+        left: 0;
+        width: calc(100% - 80px);
+    }
+
+    .main-container {
+        margin-left: 80px;
+        left: 0;
+        width: calc(100% - 80px);
+    }
+
+    .navbar {
+        position: fixed;
+        width: calc(100% - 300px);
+    }
+
+    .main-container.expand .navbar {
+        width: calc(100% - 81px);
+    }
+
+    .main-container div.content {
+        padding-top: 80px;
+    }
 }
